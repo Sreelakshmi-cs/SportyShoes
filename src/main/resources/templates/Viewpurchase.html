@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+
+<meta charset="UTF-8">
+<title>Admin-Home</title>
+</head>
+<body style="background-color:azure;">
+<br>
+
+<h1  align="center" style="background-color:DodgerBlue;">Sporty Shoes</h1>
+<h2  style="color:Tomato;" align="center">Admin</h2>
+<br>
+<div style="text-align:center" >
+<a th:href="@{/adminhome}">Home</a>&nbsp;&nbsp;
+<a th:href="@{/changepassword}">Change Password</a>&nbsp;&nbsp;
+<a th:href="@{/logout}">LogOut</a>&nbsp;&nbsp;
+</div>
+<br>
+<div style="text-align:center">
+<h2  style="color:green;" align="center">View Purchases</h2>
+
+<table  align="center" class="center" border="1">
+<tr>
+<th>Purchase Id</th>
+<th>Purchase CardNumber</th>
+<th>Total Amount</th>
+<th>CartId</th>
+<th>CustomerID</th>
+</tr>
+<tr th:each="purchase :${purchases}">
+	<td th:text="${purchase.purid}"></td>
+	<td th:text="${purchase.cardnum}"></td>
+	<td th:text="${purchase.amount}"></td>
+	<td th:text="${purchase.cartid}"></td>
+	<td th:text="${purchase.cid}"></td>
+</tr>
+
+
+
+
+</table></div>
+<br>
+
+</div>
+<br>
+<br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+
+</body>
+</html>

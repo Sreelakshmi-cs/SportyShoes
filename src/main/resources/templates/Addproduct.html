@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sporty Shoes</title>
+</head>
+<body style="background-color:azure;">
+
+<h1  align="center"style="background-color:DodgerBlue;">Sporty Shoes</h1>
+<div style="text-align:center">
+<br><div>
+<a th:href="@{/adminhome}">Home</a>&nbsp;&nbsp;
+<a th:href="@{/changepassword}">Change Password</a>&nbsp;&nbsp;
+<a th:href="@{/logout}">LogOut</a>&nbsp;&nbsp;
+</div>
+<br>
+
+<h2 style="color:Tomato;">Add New Product</h2>
+<br>
+
+<form action="#" th:action="@{newproduct}" th:object="${product}" method="post">
+	<fieldset>
+	Product Name <input type="text" th:field="*{name}"><br>
+	<br>
+	Description <input type="text" th:field="*{description}"><br>
+	<br>
+	Price   <input type="text" th:field="*{price}"><br>
+	<br>
+	Size     <input type="text" th:field="*{size}"><br>
+	<br>
+	Color <input type="text" th:field="*{color}"><br>
+	<br>
+	
+<button type="Submit">Register</button>
+</fieldset>
+	
+</form>
+<br>
+<br>
+</div>
+<br><br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+
+</body>
+</html>

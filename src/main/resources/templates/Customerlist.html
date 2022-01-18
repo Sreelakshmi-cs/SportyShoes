@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sporty Shoes</title>
+</head>
+<body  style="background-color:azure;">
+<div style="text-align:center">
+
+<h1  align="center" style="background-color:DodgerBlue;">Sporty Shoes</h1>
+<div>
+<a th:href="@{/adminhome}">Home</a>&nbsp;&nbsp;
+<a th:href="@{/changepassword}">Change Password</a>&nbsp;&nbsp;
+<a th:href="@{/logout}">LogOut</a>&nbsp;&nbsp;
+</div>
+<div >
+<br>
+<h2 style="color:Tomato;">Customer List</h2>
+
+<table  align="center" class="center" border="1">
+<tr>
+<th>Customer Id</th>
+<th>Customer fname</th>
+<th>Customer lname</th>
+<th>Gender</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Username</th>
+
+</tr>
+	<tr th:each="customer :${customers}">
+	<td th:text="${customer.cid}"></td>
+	<td th:text="${customer.fname}"></td>
+	<td th:text="${customer.lname}"></td>
+	<td th:text="${customer.gender}"></td>
+	<td th:text="${customer.phone}"></td>
+	<td th:text="${customer.email}"></td>
+	<td th:text="${customer.username}"></td>
+</tr>
+</table></div>
+<br>
+</div><br>
+<br>
+<br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+
+</body>
+</html>

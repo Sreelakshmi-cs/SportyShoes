@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Customer-Home</title>
+</head>
+<body style="background-color:azure;">
+<h1  align="center" style="background-color:DodgerBlue;">Sporty Shoes</h1>
+<div style="text-align:center">
+
+<br>
+&nbsp;&nbsp;<a th:href="@{/Customerhome}">Home</a>&nbsp;&nbsp;
+<a th:href="@{/clogout}">LogOut</a>
+</div>
+<br><div >
+<h2  style="color:Tomato;" align="center">Items in Stock!!!</h2>
+
+<table align="center" class="center" border="1">
+
+<tr>
+<th>Product Id</th>
+<th>Product name</th>
+<th>Description</th>
+<th>Price</th>
+<th>Size</th>
+<th>Color</th>
+<th>Choice</th>
+</tr>
+	<tr th:each="product :${products}">
+	<td th:text="${product.pid}"></td>
+	<td th:text="${product.name}"></td>
+	<td th:text="${product.description}"></td>
+	<td th:text="${product.price}"></td>
+	<td th:text="${product.size}"></td>
+	<td th:text="${product.color}"></td>
+	<td><a th:href="@{/addcart}">Buy</a></td>
+</tr>
+</table></div><br>
+<br>
+<br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+
+</body>
+</html>

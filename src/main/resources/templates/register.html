@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sport Shoes</title>
+</head>
+<body  style="background-color:azure;">
+<div style="text-align:center">
+<h1  align="center"style="background-color:DodgerBlue;">SportyShoes</h1>
+<h2 style="color:Tomato;">Welcome, Register here</h2>
+
+<form action="#" th:action="@{addCustomer}" th:object="${customer}" method="post">
+<fieldset>
+	FirstName <input type="text" th:field="*{fname}"><br>
+	<br>
+	LastName <input type="text" th:field="*{lname}"><br>
+	<br>
+	Gender    <input type="text" th:field="*{gender}"><br>
+	<br>
+	Phone     <input type="text" th:field="*{phone}"><br>
+	<br>
+	Your email <input type="text" th:field="*{email}"><br>
+	<br>
+	Set Username <input type="text" th:field="*{username}"><br>
+	<br>
+	Set Password <input type="text" th:field="*{password}"><br>
+	<br>
+	
+<button type="Submit">Register</button>
+</fieldset>
+</form><br>
+<br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+
+</div>
+</body>
+</html>

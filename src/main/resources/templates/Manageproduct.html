@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sporty Shoes</title>
+</head>
+<body  style="background-color:azure;">
+<div style="text-align:center">
+
+<h1  align="center" style="background-color:DodgerBlue;">Sporty Shoes</h1>
+<div>
+<a th:href="@{/adminhome}">Home</a>&nbsp;&nbsp;
+<a th:href="@{/changepassword}">Change Password</a>&nbsp;&nbsp;
+<a th:href="@{/logout}">LogOut</a>&nbsp;&nbsp;
+</div>
+<div >
+<br>
+<br>
+<h2 style="color:Tomato;">Product List</h2>
+<br>
+
+<table  align="center" class="center" border="1">
+<tr>
+<th>Product Id</th>
+<th>Product name</th>
+<th>Description</th>
+<th>Price</th>
+<th>Size</th>
+<th>Color</th>
+<th>Manage</th>
+</tr>
+	<tr th:each="product :${products}">
+	<td th:text="${product.pid}"></td>
+	<td th:text="${product.name}"></td>
+	<td th:text="${product.description}"></td>
+	<td th:text="${product.price}"></td>
+	<td th:text="${product.size}"></td>
+	<td th:text="${product.color}"></td>
+	<td><a th:href="@{/deleteproduct/{id}}">Delete</a></td>
+</tr>
+</table></div>
+<br>
+<a th:href="@{/AddProduct}">Add Product</a><br>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+
+</body>
+</html>

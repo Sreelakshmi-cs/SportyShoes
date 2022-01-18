@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+
+<meta charset="UTF-8">
+<title>Admin-Home</title>
+</head>
+<body style="background-color:azure;">
+<br>
+
+<h1  align="center" style="background-color:DodgerBlue;">Sporty Shoes</h1>
+<h2  style="color:Tomato;" align="center">Admin Home</h2>
+<br>
+<div >
+<a th:href="@{/changepassword}">Change Password</a>&nbsp;&nbsp;
+<a th:href="@{/logout}">LogOut</a>
+</div>
+<br>
+<div style="text-align:center">
+
+<fieldset>
+<h3  style="color:brown;" align="center">Operations</h3>
+<a th:href="@{/manageProducts}">---  Manage Products  ---</a><br><br><br>
+<a th:href="@{/customerlist}">---  List of Users  ---</a><br><br><br>
+<a th:href="@{/managepurchase}">-- Manage Purchase  ---</a><br><br><br>
+</fieldset>
+</div>
+<br>
+<br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+
+</body>
+</html>

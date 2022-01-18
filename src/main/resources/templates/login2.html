@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sport Shoes</title>
+</head>
+<body  style="background-color:azure;">
+<div style="text-align:center">
+
+<br>
+<br>
+<h4 th:text="${action}"></h4>
+<h1  align="center"style="background-color:DodgerBlue;">SportyShoes</h1>
+<h2 style="color:Tomato;">Customer Login</h2>
+
+<br/>
+<form action="#" th:action="@{/checkcustomer}" method="post">
+		<br/>
+		<br/>
+		<fieldset>
+		<legend>User Login</legend> <br/>
+		User name: <input name="username" type="text" /> <br/>
+		<br/>
+	    Password: <input name="password"  type="password"/> <br/>
+	    <br/>
+		<input type="submit" value="Sign In" /><br>
+		<br>
+		<a th:href="@{/register}">New Here?Sign Up</a>
+		<br>
+		</fieldset>
+</form>
+</div>
+<br>
+<br>
+<br>
+<h3  align="center" style="background-color:DodgerBlue;">@2022 Sportyshoes.com</h3>
+</body>
+</html>
